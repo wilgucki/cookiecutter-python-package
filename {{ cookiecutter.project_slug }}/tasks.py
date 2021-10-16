@@ -45,13 +45,13 @@ def clean_docs(c):
 @task
 def lint(c):
     """Check style with flake8"""
-    c.run('flake8 src tests')
+    c.run('flake8 src tests', pty=True)
 
 
 @task
 def test(c):
     """Run tests"""
-    c.run('pytest')
+    c.run('pytest', pty=True)
 
 
 @task
